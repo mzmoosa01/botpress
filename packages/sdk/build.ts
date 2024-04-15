@@ -2,7 +2,7 @@ import esbuild from 'esbuild'
 
 import { dependencies } from './package.json'
 
-const external = Object.keys(dependencies)
+const external = Object.keys(dependencies).filter((d) => d !== 'zui')
 
 void esbuild.build({
   entryPoints: ['./src/index.ts'],

@@ -49,6 +49,7 @@ export const listEventsInputSchema = z
     count: z.number().min(1).max(2500).default(100).describe('The maximum number of events to return.'),
     pageToken: z.string().optional().describe('Token specifying which result page to return.'),
     timeMin: z.string().optional().describe('The minimum start time of events to return.'),
+    timeMax: z.string().optional().describe('The maximum start time of events to return.'),
   })
   .partial()
 
